@@ -96,6 +96,7 @@ function Home() {
       {isAuthenticated ? (
         <div>
           <a
+            { /* 리다이렉트 경로 지정시 마지막 슬래시 포함여부 확인 */}
             href={`${keycloakUrl}/logout?post_logout_redirect_uri=${"http://localhost:5173"}&client_id=${clientId}`}
           >
             logout
